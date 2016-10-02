@@ -1,0 +1,88 @@
+<f:alias xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+         xmlns:formz="http://typo3.org/ns/Romm/Formz/ViewHelpers"
+         map="{
+			classes: 'btn btn-lg btn-block',
+			selectedClasses: 'disabled btn-primary',
+			defaultClasses: 'btn-default',
+			inputClass: 'form-control'
+		}">
+
+<div class="container">
+	<div class="row">
+		<f:render section="Header" />
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h5 class="panel-title">
+							<f:translate key="formz_example.show_another_layout.title" />
+						</h5>
+					</div>
+
+					<div class="panel-body">
+						<p>
+							<f:translate key="formz_example.show_another_layout.body" />
+						</p>
+
+						<div class="row">
+							<div class="col-md-6 form-group">
+								<f:render section="FieldLayoutBootstrap" />
+							</div>
+
+							<div class="col-md-6">
+								<f:render section="FieldLayoutFoundation" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<hr />
+
+
+				<formz:form action="submitForm" name="exForm" object="{form}">
+					<div class="row">
+						<div class="col-md-6 form-group">
+							<f:render section="FieldFirstName" />
+						</div>
+
+						<div class="col-md-6 form-group">
+							<f:render section="FieldName" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 form-group">
+							<f:render section="FieldEmail" />
+						</div>
+
+						<div class="col-md-6 form-group">
+							<f:render section="FieldGender" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 form-group">
+							<f:render section="FieldLikeIceCream" />
+						</div>
+						<div class="col-md-6 form-group">
+							<f:render section="FieldIceCreamFlavors" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12 form-group">
+							<f:render section="FieldQuestion" />
+						</div>
+					</div>
+
+					<f:form.submit value="Send" class="btn btn-primary" />
+				</formz:form>
+
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</f:alias>

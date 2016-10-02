@@ -1,0 +1,175 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:formz="http://typo3.org/ns/Romm/Formz/ViewHelpers">
+
+<f:layout name="{layoutPath}" />
+
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:section name="Header">
+	<h1 class="text-center">
+		<f:image src="{f:uri.resource(path: 'Images/formz-icon.png')}" alt="Formz" width="48" />
+		Formz&nbsp;&ndash;&nbsp;Example
+	</h1>
+
+	<hr />
+
+	<div class="jumbotron">
+		<p>
+			This is a small example of a form built with the extension
+			<f:link.external uri="https://typo3.org/extensions/repository/view/formz/" target="_blank" title="Formz">
+				<span class="label label-default" style="font-size: 1.1em">
+					<f:image src="EXT:formz_example/ext_icon.png" alt="Formz" width="24" />
+					&nbsp;Formz
+				</span>
+			</f:link.external>
+		</p>
+
+		<hr />
+
+		<p>
+			It contains some basic fields with their own validation rules; most of them are handled instantly with <strong>JavaScript</strong>, but the same rules also apply on the server-side with <strong>PHP</strong>.
+		</p>
+
+		<p>
+			It also shows the power of Formz layouts, which provide ready-to-use templates for the frameworks
+			<strong>Twitter Bootstrap</strong> and
+			<strong>Foundation</strong>: you can choose below which one you want to display.
+		</p>
+
+		<p>You can take look at the code used by this small extension to understand how it works and how easy it is to set up a new form. You can also read
+			<f:link.external uri="https://docs.typo3.org/typo3cms/extensions/formz/" target="_blank">Formz documentation</f:link.external>
+		   to know everything about it (there is also a
+			<f:link.external
+					uri="https://docs.typo3.org/typo3cms/extensions/formz/_pdf/"
+					target="_blank">PDF version
+			</f:link.external>
+		   ).
+		</p>
+	</div>
+</f:section>
+
+<f:section name="FieldLayoutBootstrap">
+	<f:link.action arguments="{layout: 'bootstrap3'}"
+	               class="{classes} {f:if(condition: '{layoutUsed} == \'bootstrap3\'', then: '{selectedClasses}', else: '{defaultClasses}')}">
+		Use <strong>Twitter Bootstrap</strong> {f:if(condition: '{layoutUsed} == \'bootstrap3\'', then: '&#10004;')}
+	</f:link.action>
+</f:section>
+
+<f:section name="FieldLayoutFoundation">
+	<f:link.action arguments="{layout: 'foundation5'}"
+	               class="{classes} {f:if(condition: '{layoutUsed} == \'foundation5\'', then: '{selectedClasses}', else: '{defaultClasses}')}">
+		Use <strong>Foundation</strong> {f:if(condition: '{layoutUsed} == \'foundation5\'', then: '&#10004;')}
+	</f:link.action>
+</f:section>
+
+<f:section name="FieldEmail">
+	<formz:field name="email" layout="{layoutUsed}">
+		<formz:option name="label" value="Email" />
+		<formz:option name="labelWrap" value="1" />
+
+		<formz:section name="Field">
+			<f:form.textfield class="{inputClass}" property="{fieldName}"
+			                  id="{fieldId}" placeholder="Email" />
+		</formz:section>
+	</formz:field>
+</f:section>
+
+<f:section name="FieldFirstName">
+	<formz:field name="firstName" layout="{layoutUsed}">
+		<formz:option name="label" value="First name" />
+		<formz:option name="labelWrap" value="1" />
+
+		<formz:section name="Field">
+			<f:form.textfield class="{inputClass}" property="{fieldName}"
+			                  id="{fieldId}" placeholder="John" />
+		</formz:section>
+	</formz:field>
+</f:section>
+
+<f:section name="FieldName">
+	<formz:field name="name" layout="{layoutUsed}">
+		<formz:option name="label" value="Name" />
+		<formz:option name="labelWrap" value="1" />
+
+		<formz:section name="Field">
+			<f:form.textfield class="{inputClass}" property="{fieldName}"
+			                  id="{fieldId}" placeholder="Doe" />
+		</formz:section>
+	</formz:field>
+</f:section>
+
+<f:section name="FieldGender">
+	<formz:field name="gender" layout="{layoutUsed}.radio-button">
+		<formz:option name="label" value="Gender" />
+		<formz:option name="columns" value="6" />
+		<formz:option name="items" value="{
+			female: {label: 'Female'},
+			male: {label: 'Male', reverse: 1}
+		}" />
+
+		<formz:section name="Field-female">
+			<f:form.radio property="{fieldName}" id="{fieldId}-female" value="female" />
+		</formz:section>
+
+		<formz:section name="Field-male">
+			<f:form.radio property="{fieldName}" id="{fieldId}-male" value="male" />
+		</formz:section>
+	</formz:field>
+</f:section>
+
+<f:section name="FieldQuestion">
+	<formz:field name="question" layout="{layoutUsed}">
+		<formz:option name="label" value="What is the best CMS in the world?" />
+		<formz:option name="showSuccess" value="1" />
+
+		<formz:section name="Field">
+			<f:form.textfield class="{inputClass}" property="{fieldName}"
+			                  placeholder="I'm sure you know..." />
+		</formz:section>
+	</formz:field>
+</f:section>
+
+<f:section name="FieldLikeIceCream">
+	<formz:field name="likeIceCream" layout="{layoutUsed}">
+		<formz:option name="label" value="Do you like ice cream?" />
+		<formz:option name="labelWrap" value="1" />
+
+		<formz:section name="Field">
+			<div class="radio">
+				<label>
+					<f:form.radio property="{fieldName}" id="{fieldId}-yes" value="1" />
+					Yes </label>
+			</div>
+
+			<div class="radio">
+				<label>
+					<f:form.radio property="{fieldName}" id="{fieldId}-no" value="0" />
+					No </label>
+			</div>
+		</formz:section>
+	</formz:field>
+</f:section>
+
+<f:section name="FieldIceCreamFlavors">
+	<formz:field name="iceCreamFlavors" layout="{layoutUsed}">
+		<formz:option name="label" value="Which flavors?" />
+		<formz:option name="labelWrap" value="1" />
+
+		<formz:section name="Field">
+			<div class="checkbox">
+				<label>
+					<f:form.checkbox property="{fieldName}" id="{fieldId}-chocolate" multiple="1" value="chocolate" />
+					Chocolate </label>
+			</div>
+
+			<div class="checkbox">
+				<label>
+					<f:form.checkbox property="{fieldName}" id="{fieldId}-strawberry" multiple="1" value="strawberry" />
+					Strawberry </label>
+			</div>
+		</formz:section>
+	</formz:field>
+</f:section>
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "romm/formz-example",
+  "type": "typo3-cms-extension",
+  "description": "Form example for EXT:formz",
+  "keywords": [
+    "typo3", "forms", "flexibility"
+  ],
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Romain Canon",
+      "email": "romain.hydrocanon@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "romm/formz": "~0.1"
+  },
+  "replace": {
+    "formz_example": "self.version",
+    "typo3-ter/formz-example": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "Romm\\FormzExample\\": "Classes/"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+<f:alias xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+         xmlns:formz="http://typo3.org/ns/Romm/Formz/ViewHelpers"
+         map="{
+			classes: 'large expand button',
+			selectedClasses: 'disabled',
+			defaultClasses: 'secondary'
+		}">
+
+<div class="container">
+	<div class="row">
+		<f:render section="Header" />
+
+		<formz:form action="submitForm" name="exForm" object="{form}">
+			<div class="row">
+				<div class="panel callout radius">
+					<h5>
+						<f:translate key="formz_example.show_another_layout.title" />
+					</h5>
+
+					<p>
+						<f:translate key="formz_example.show_another_layout.body" />
+					</p>
+
+					<div class="large-6 columns">
+						<f:render section="FieldLayoutBootstrap" />
+					</div>
+
+					<div class="large-6 columns">
+						<f:render section="FieldLayoutFoundation" />
+					</div>
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="row">
+				<div class="large-6 columns">
+					<f:render section="FieldFirstName" />
+				</div>
+
+				<div class="large-6 columns">
+					<f:render section="FieldName" />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="large-6 columns">
+					<f:render section="FieldEmail" />
+				</div>
+
+				<div class="large-6 columns">
+					<f:render section="FieldGender" />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="large-6 columns">
+					<f:render section="FieldLikeIceCream" />
+				</div>
+
+				<div class="large-6 columns">
+					<f:render section="FieldIceCreamFlavors" />
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="large-12 columns">
+					<f:render section="FieldQuestion" />
+				</div>
+			</div>
+
+			<f:form.submit value="Send" class="button" />
+		</formz:form>
+	</div>
+
+</div>
+
+</f:alias>

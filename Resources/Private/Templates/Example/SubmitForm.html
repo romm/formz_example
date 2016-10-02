@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+	<div class="jumbotron">
+		<h1>Form results</h1>
+
+		<hr />
+
+		<p>You successfully filled the form up! Here is what you told us:</p>
+
+		<ul>
+			<li>
+				<strong>Name:</strong>&nbsp;{form.name}
+			</li>
+			<li>
+				<strong>First name:</strong>&nbsp;{form.firstName}
+			</li>
+			<li>
+				<strong>Gender:</strong>&nbsp;{form.gender}
+			</li>
+			<li>
+				<strong>Email:</strong>&nbsp;{form.email}
+			</li>
+			<f:if condition="{form.likeIceCream}">
+				<li>
+					You like these ice cream flavors:
+					<ul>
+						<f:for each="{form.iceCreamFlavors}" as="iceCreamFlavor">
+							<li>{iceCreamFlavor}</li>
+						</f:for>
+					</ul>
+				</li>
+			</f:if>
+		</ul>
+
+		<f:link.action action="showForm">← Go back to the form</f:link.action>
+	</div>
+</f:section>
+
+</html>
