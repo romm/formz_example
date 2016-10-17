@@ -1,11 +1,1 @@
-page >
-page = PAGE
-page {
-    10 < styles.content.get
-
-    includeJSFooter {
-        10 = EXT:formz_example/Resources/Public/JavaScript/ExampleForm.js
-    }
-}
-
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:formz_example/Configuration/TypoScript/Form/ExampleForm.ts">
