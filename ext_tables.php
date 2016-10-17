@@ -18,6 +18,18 @@ call_user_func(
             'Configuration/TypoScript',
             '[Formz] Form example - Configuration'
         );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            $extensionKey,
+            'Configuration/TypoScript/Bootstrap/Bootstrap3',
+            '[Formz] Form example - Twitter Bootstrap 3 Theme'
+        );
+
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            $extensionKey,
+            'Configuration/TypoScript/Foundation/Foundation5',
+            '[Formz] Form example - Foundation 5 Theme'
+        );
     },
     $_EXTKEY
 );
