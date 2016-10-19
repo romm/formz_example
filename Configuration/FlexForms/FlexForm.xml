@@ -24,6 +24,29 @@
 						</TCEforms>
 					</switchableControllerActions>
 
+					<settings.layoutUsed>
+						<TCEforms>
+							<label>Layout</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="1">
+										<numIndex index="0">Default</numIndex>
+										<numIndex index="1">default</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">Twitter Bootstrap 3</numIndex>
+										<numIndex index="1">bootstrap3</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">Foundation 5</numIndex>
+										<numIndex index="1">foundation5</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.layoutUsed>
+
 				</el>
 			</ROOT>
 		</sDEF>
