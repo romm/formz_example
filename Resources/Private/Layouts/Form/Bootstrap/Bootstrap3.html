@@ -7,7 +7,25 @@
 	inputClass: 'form-control'
 }">
 
-    <f:render section="Header" />
+    <div class="panel-group" id="formz-about">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#formz-about" href="#formz-about-collapse">
+                        <span class="glyphicon glyphicon-question-sign"></span>&nbsp;About
+                    </a>
+                </h4>
+            </div>
+
+            <div id="formz-about-collapse" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <f:render section="Header" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
 
     <formz:form action="submitForm" name="exForm" object="{form}">
         <f:render section="FieldFirstName" />
