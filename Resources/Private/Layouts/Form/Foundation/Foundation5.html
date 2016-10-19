@@ -6,52 +6,52 @@
 	defaultClasses: 'secondary'
 }">
 
-<div class="container">
-	<div class="row">
-		<f:render section="Header" />
+    <div class="row">
+        <ul class="accordion" data-accordion>
+            <li class="accordion-navigation">
+                <a href="#formz-about-collapse">About</a>
 
-		<formz:form action="submitForm" name="exForm" object="{form}">
+                <div id="formz-about-collapse" class="content">
+                    <f:render section="Header" />
+                </div>
+            </li>
+        </ul>
 
-			<div class="row">
-				<div class="large-6 columns">
-					<f:render section="FieldFirstName" />
-				</div>
+        <hr />
+    </div>
 
-				<div class="large-6 columns">
-					<f:render section="FieldName" />
-				</div>
-			</div>
+    <formz:form action="submitForm" name="exForm" object="{form}">
+        <div class="row">
+            <f:render section="FieldFirstName" />
+        </div>
 
-			<div class="row">
-				<div class="large-6 columns">
-					<f:render section="FieldEmail" />
-				</div>
+        <div class="row">
+            <f:render section="FieldName" />
+        </div>
 
-				<div class="large-6 columns">
-					<f:render section="FieldGender" />
-				</div>
-			</div>
+        <div class="row">
+            <f:render section="FieldEmail" />
+        </div>
 
-			<div class="row">
-				<div class="large-6 columns">
-					<f:render section="FieldLikeIceCream" />
-				</div>
+        <div class="row">
+            <f:render section="FieldGender" />
+        </div>
 
-				<div class="large-6 columns">
-					<f:render section="FieldIceCreamFlavors" />
-				</div>
-			</div>
+        <div class="row">
+            <div class="large-6 columns">
+                <f:render section="FieldLikeIceCream" />
+            </div>
 
-			<div class="row">
-				<div class="large-12 columns">
-					<f:render section="FieldQuestion" />
-				</div>
-			</div>
+            <div class="large-6 columns">
+                <f:render section="FieldIceCreamFlavors" />
+            </div>
+        </div>
 
-			<f:form.submit value="Send" class="button" />
-		</formz:form>
-	</div>
+        <div class="row">
+            <f:render section="FieldQuestion" />
+        </div>
 
-</div>
+        <f:form.submit value="Send" class="button" />
+    </formz:form>
 
 </f:alias>
