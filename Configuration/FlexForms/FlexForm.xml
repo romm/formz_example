@@ -1,0 +1,32 @@
+<T3DataStructure>
+	<sheets>
+
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Configuration</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+					<switchableControllerActions>
+						<TCEforms>
+							<label>Form</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="1">
+										<numIndex index="0">Default example</numIndex>
+										<numIndex index="1">Example->showForm;Example->submitForm</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+
+				</el>
+			</ROOT>
+		</sDEF>
+
+	</sheets>
+</T3DataStructure>
