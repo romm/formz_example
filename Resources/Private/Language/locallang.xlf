@@ -5,14 +5,6 @@
 
 		<body>
 
-            <trans-unit id="formz_example.show_another_layout.title">
-				<source>Choose a layout</source>
-			</trans-unit>
-
-            <trans-unit id="formz_example.show_another_layout.body">
-				<source>Choose one of the layouts below to change the rendering of this page. The whole form visual will be automatically updated, but the same template will still be used.</source>
-			</trans-unit>
-
 		</body>
 	</file>
 </xliff>

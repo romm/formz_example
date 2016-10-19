@@ -11,31 +11,6 @@
         <f:render section="Header" />
 
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h5 class="panel-title">
-                        <f:translate key="formz_example.show_another_layout.title" />
-                    </h5>
-                </div>
-
-                <div class="panel-body">
-                    <p>
-                        <f:translate key="formz_example.show_another_layout.body" />
-                    </p>
-
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <f:render section="FieldLayoutBootstrap" />
-                        </div>
-
-                        <div class="col-md-6">
-                            <f:render section="FieldLayoutFoundation" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <hr />
 
             <formz:form action="submitForm" name="exForm" object="{form}">
                 <f:render section="FieldFirstName" />
