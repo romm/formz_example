@@ -7,35 +7,29 @@
 	inputClass: 'form-control'
 }">
 
-    <div class="row">
-        <f:render section="Header" />
+    <f:render section="Header" />
 
-        <div class="col-md-8 col-md-offset-2">
+    <formz:form action="submitForm" name="exForm" object="{form}">
+        <f:render section="FieldFirstName" />
 
-            <formz:form action="submitForm" name="exForm" object="{form}">
-                <f:render section="FieldFirstName" />
+        <f:render section="FieldName" />
 
-                <f:render section="FieldName" />
+        <f:render section="FieldEmail" />
 
-                <f:render section="FieldEmail" />
+        <f:render section="FieldGender" />
 
-                <f:render section="FieldGender" />
-
-                <div class="row">
-                    <div class="col-md-6 form-group">
-                        <f:render section="FieldLikeIceCream" />
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <f:render section="FieldIceCreamFlavors" />
-                    </div>
-                </div>
-
-                <f:render section="FieldQuestion" />
-
-                <f:form.submit value="Send" class="btn btn-primary" />
-            </formz:form>
-
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <f:render section="FieldLikeIceCream" />
+            </div>
+            <div class="col-md-6 form-group">
+                <f:render section="FieldIceCreamFlavors" />
+            </div>
         </div>
-    </div>
+
+        <f:render section="FieldQuestion" />
+
+        <f:form.submit value="Send" class="btn btn-primary" />
+    </formz:form>
 
 </f:alias>
