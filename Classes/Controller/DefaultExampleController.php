@@ -13,7 +13,7 @@ use Romm\FormzExample\Form\ExampleForm;
 use Romm\FormzExample\Layouts\LayoutsInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
-class ExampleController extends ActionController
+class DefaultExampleController extends ActionController
 {
 
     use FormTrait;
