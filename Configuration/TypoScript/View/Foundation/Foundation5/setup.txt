@@ -5,6 +5,7 @@ page {
 
     includeJSFooter {
         foundation = EXT:formz_example/Resources/Public/Contrib/Foundation/Foundation5/js/foundation.min.js
+        formzExample = EXT:formz_example/Resources/Public/JavaScript/FormzExample.Foundation5.js
     }
 
     includeCSS {
