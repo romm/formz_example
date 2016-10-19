@@ -17,7 +17,7 @@
 								<items>
 									<numIndex index="1">
 										<numIndex index="0">Default example</numIndex>
-										<numIndex index="1">Example->showForm;Example->submitForm</numIndex>
+										<numIndex index="1">DefaultExample->showForm;DefaultExample->submitForm</numIndex>
 									</numIndex>
 								</items>
 							</config>
