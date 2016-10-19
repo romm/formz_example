@@ -1,0 +1,21 @@
+{namespace formz=Romm\Formz\ViewHelpers}
+
+<f:render section="Header" />
+
+<formz:form action="submitForm" name="exForm" object="{form}">
+    <f:render section="FieldFirstName" />
+
+    <f:render section="FieldName" />
+
+    <f:render section="FieldEmail" />
+
+    <f:render section="FieldGender" />
+
+    <f:render section="FieldLikeIceCream" />
+
+    <f:render section="FieldIceCreamFlavors" />
+
+    <f:render section="FieldQuestion" />
+
+    <f:form.submit value="Send" />
+</formz:form>
