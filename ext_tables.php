@@ -30,6 +30,11 @@ call_user_func(
             'Configuration/TypoScript/Foundation/Foundation5',
             '[Formz] Form example - Foundation 5 Theme'
         );
+
+        $defaultPluginKey = 'formzexample_example';
+        $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$defaultPluginKey] = 'pi_flexform';
+        $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$defaultPluginKey] = 'recursive,select_key,pages';
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($defaultPluginKey, "FILE:EXT:$extensionKey/Configuration/FlexForms/FlexForm.xml");
     },
     $_EXTKEY
 );
