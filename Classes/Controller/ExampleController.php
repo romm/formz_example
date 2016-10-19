@@ -42,7 +42,7 @@ class ExampleController extends ActionController
             $this->view->assign('layoutPath', $this->getLayoutPath());
             $this->view->assign('layoutUsed', $this->getSelectedLayout());
         } catch (EntryNotFoundException $e) {
-            $this->redirect('showForm', null, null, ['layout' => LayoutsInterface::LAYOUT_BOOTSTRAP3]);
+            $this->redirect('showForm', null, null, ['layout' => self::DEFAULT_LAYOUT]);
         }
     }
 
