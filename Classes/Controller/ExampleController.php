@@ -18,12 +18,13 @@ class ExampleController extends ActionController
 
     use FormTrait;
 
-    const DEFAULT_LAYOUT = LayoutsInterface::LAYOUT_BOOTSTRAP3;
+    const DEFAULT_LAYOUT = LayoutsInterface::LAYOUT_DEFAULT;
 
     /**
      * @var array
      */
     protected static $layoutList = [
+        LayoutsInterface::LAYOUT_DEFAULT     => 'Form/Default',
         LayoutsInterface::LAYOUT_BOOTSTRAP3  => 'Form/Bootstrap/Bootstrap3',
         LayoutsInterface::LAYOUT_FOUNDATION5 => 'Form/Foundation/Foundation5'
     ];
@@ -35,11 +36,6 @@ class ExampleController extends ActionController
     {
         /** @var ExampleForm $submittedForm */
         $submittedForm = FormUtility::getFormWithErrors(ExampleForm::class);
-
-//        if (null === $submittedForm) {
-//            $submittedForm = new ExampleForm();
-//            $submittedForm->setLayout(ExampleForm::LAYOUT_BOOTSTRAP3);
-//        }
 
         try {
             $this->view->assign('form', $submittedForm);
@@ -81,8 +77,8 @@ class ExampleController extends ActionController
      */
     protected function getSelectedLayout()
     {
-        return ($this->request->hasArgument('layout'))
-            ? $this->request->getArgument('layout')
+        return (array_key_exists($this->settings['layoutUsed'], self::$layoutList))
+            ? $this->settings['layoutUsed']
             : self::DEFAULT_LAYOUT;
     }
 
