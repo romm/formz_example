@@ -22,13 +22,13 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $extensionKey,
             'Configuration/TypoScript/View/Bootstrap/Bootstrap3',
-            '[Formz] Form example - Twitter Bootstrap 3 Assets'
+            '[Formz] Form example - Assets for Twitter Bootstrap 3'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $extensionKey,
             'Configuration/TypoScript/View/Foundation/Foundation5',
-            '[Formz] Form example - Foundation 5 Assets'
+            '[Formz] Form example - Assets for Foundation 5 Assets'
         );
 
         $defaultPluginKey = 'formzexample_example';
