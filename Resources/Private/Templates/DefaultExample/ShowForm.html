@@ -8,39 +8,26 @@
 
 <f:section name="Header">
     <p>
-        This is a small example of a form built with the extension <f:link.external uri="http://typo3-formz.com" target="_blank" title="Formz">Formz</f:link.external>.
+        This is a small example of a form built with the extension <f:link.external uri="http://typo3-formz.com" title="Formz website">Formz</f:link.external>.
     </p>
+
+    <p><f:link.external uri="http://typo3-formz.com" title="Formz website" /></p>
 
     <hr />
 
     <p>
-        It contains some basic fields with their own validation rules; most of them are handled instantly with
-        <strong>JavaScript</strong>, but the same rules also apply on the server-side with
-        <strong>PHP</strong>.
+        It contains some basic fields with their own validation rules; most of them are handled instantly with <strong>JavaScript</strong>, but the same rules also apply on the server-side with <strong>PHP</strong>.
     </p>
 
     <p>
-        It also shows the power of Formz layouts, which provide ready-to-use templates for the frameworks
-        <strong>Twitter Bootstrap</strong> and
-        <strong>Foundation</strong>: you can choose below which one you want to display.
-    </p>
-
-    <p>You can take look at the code used by this small extension to understand how it works and how easy it is to set up a new form. You can also read
-        <f:link.external uri="https://docs.typo3.org/typo3cms/extensions/formz/" target="_blank">Formz documentation</f:link.external>
-        to know everything about it (there is also a
-        <f:link.external
-            uri="https://docs.typo3.org/typo3cms/extensions/formz/_pdf/"
-            target="_blank">PDF version
-        </f:link.external>
-        ).
+        You can take look at the code used by this small extension to understand how it works and how easy it is to set up a new form. You can also read <f:link.external uri="https://docs.typo3.org/typo3cms/extensions/formz/" target="_blank">Formz documentation</f:link.external> to know everything about it (there is also a <f:link.external uri="https://docs.typo3.org/typo3cms/extensions/formz/_pdf/" target="_blank">PDF version</f:link.external>).
     </p>
 </f:section>
 
 <f:section name="FieldLayoutBootstrap">
     <f:link.action arguments="{layout: 'bootstrap3'}"
                    class="{classes} {f:if(condition: '{layoutUsed} == \'bootstrap3\'', then: '{selectedClasses}', else: '{defaultClasses}')}">
-        Use
-        <strong>Twitter Bootstrap</strong> {f:if(condition: '{layoutUsed} == \'bootstrap3\'', then: '&#10004;')}
+        Use <strong>Twitter Bootstrap</strong> {f:if(condition: '{layoutUsed} == \'bootstrap3\'', then: '&#10004;')}
     </f:link.action>
 </f:section>
 
