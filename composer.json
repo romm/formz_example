@@ -1,7 +1,7 @@
 {
   "name": "romm/formz-example",
   "type": "typo3-cms-extension",
-  "description": "Form example for EXT:formz",
+  "description": "Provides plug-in examples for the TYPO3 extension Formz.",
   "keywords": [
     "typo3", "forms", "flexibility"
   ],
