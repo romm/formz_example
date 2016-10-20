@@ -24,21 +24,6 @@
     </p>
 </f:section>
 
-<f:section name="FieldLayoutBootstrap">
-    <f:link.action arguments="{layout: 'bootstrap3'}"
-                   class="{classes} {f:if(condition: '{layoutUsed} == \'bootstrap3\'', then: '{selectedClasses}', else: '{defaultClasses}')}">
-        Use <strong>Twitter Bootstrap</strong> {f:if(condition: '{layoutUsed} == \'bootstrap3\'', then: '&#10004;')}
-    </f:link.action>
-</f:section>
-
-<f:section name="FieldLayoutFoundation">
-    <f:link.action arguments="{layout: 'foundation5'}"
-                   class="{classes} {f:if(condition: '{layoutUsed} == \'foundation5\'', then: '{selectedClasses}', else: '{defaultClasses}')}">
-        Use
-        <strong>Foundation</strong> {f:if(condition: '{layoutUsed} == \'foundation5\'', then: '&#10004;')}
-    </f:link.action>
-</f:section>
-
 <f:section name="FieldEmail">
     <formz:field name="email" layout="{layoutUsed}">
         <formz:option name="label" value="Email" />
