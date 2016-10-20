@@ -1,10 +1,10 @@
 <?php
 /** @noinspection PhpUndefinedVariableInspection */
 $EM_CONF[$_EXTKEY] = [
-    'title'       => 'Formz : Handler for forms - Example',
+    'title'       => 'Formz - Examples',
     'version'     => '0.1.0',
     'state'       => 'beta',
-    'description' => 'Form example for EXT:formz',
+    'description' => 'Provides plug-in examples for the extension Formz.',
 
     'author'       => 'Romain Canon',
     'author_email' => 'romain.hydrocanon@gmail.com',
