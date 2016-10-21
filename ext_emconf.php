@@ -2,7 +2,7 @@
 /** @noinspection PhpUndefinedVariableInspection */
 $EM_CONF[$_EXTKEY] = [
     'title'       => 'Formz - Examples',
-    'version'     => '0.1.0',
+    'version'     => '0.2.0',
     'state'       => 'beta',
     'description' => 'Provides plug-in examples for the extension Formz.',
 
