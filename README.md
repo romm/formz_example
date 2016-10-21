@@ -6,6 +6,8 @@
 
 **This repository hosts a full working example for the TYPO3 extension [![Formz](Resources/Public/Images/formz-icon@small.png) Formz](http://typo3-formz.com/).**
 
+**→ [Formz official website](http://typo3-formz.com/)**
+
 > “Handle forms very easily with provided tools: TypoScript based validation, Fluid helpers, a whole JavaScript API, and more. Use pre-defined layouts for Twitter Bootstrap and Foundation to build good-looking forms in minutes. Need to build a basic form with only two fields? Need to build a huge registration form with dozens of fields? Use Formz, it will fulfill your needs!”
 
 ## Installation
