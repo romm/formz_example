@@ -35,6 +35,23 @@ call_user_func(
         $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$defaultPluginKey] = 'pi_flexform';
         $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$defaultPluginKey] = 'recursive,select_key,pages';
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($defaultPluginKey, "FILE:EXT:$extensionKey/Configuration/FlexForms/FlexForm.xml");
+
+        if (TYPO3_MODE === 'BE') {
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptSetup('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $extensionKey . '/Configuration/TypoScript/Backend/Configuration.t3s">');
+
+            \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerModule(
+                'Romm.' . $extensionKey,
+                'tools',
+                'formz_example',
+                '',
+                [
+                    'DefaultExample' => 'showForm,submitForm',
+                ],
+                [
+                    'labels' => 'Formz example',
+                ]
+            );
+        }
     },
     $_EXTKEY
 );

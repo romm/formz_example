@@ -1,0 +1,20 @@
+<f:be.container>
+    <f:be.pageRenderer loadJQuery="1" />
+
+    <div class="typo3-fullDoc">
+        <div id="typo3-docheader">
+            <div class="typo3-docheader-buttons">
+                <div class="right">
+                    <f:be.buttons.shortcut />
+                </div>
+            </div>
+        </div>
+
+        <div id="typo3-docbody">
+            <div id="typo3-inner-docbody">
+                <f:render section="Main" arguments="{_all}" />
+            </div>
+        </div>
+
+    </div>
+</f:be.container>
