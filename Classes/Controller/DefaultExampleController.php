@@ -7,7 +7,7 @@
 namespace Romm\FormzExample\Controller;
 
 use Romm\Formz\Form\FormTrait;
-use Romm\Formz\Utility\FormUtility;
+use Romm\Formz\Service\FormService;
 use Romm\FormzExample\Exceptions\EntryNotFoundException;
 use Romm\FormzExample\Form\ExampleForm;
 use Romm\FormzExample\Layouts\LayoutsInterface;
@@ -35,7 +35,7 @@ class DefaultExampleController extends ActionController
     public function showFormAction()
     {
         /** @var ExampleForm $submittedForm */
-        $submittedForm = FormUtility::getFormWithErrors(ExampleForm::class);
+        $submittedForm = FormService::getFormWithErrors(ExampleForm::class);
 
         try {
             $this->view->assign('form', $submittedForm);
@@ -47,11 +47,11 @@ class DefaultExampleController extends ActionController
     }
 
     /**
-     * @see \Romm\Formz\Utility\FormUtility::onRequiredArgumentIsMissing
+     * @see \Romm\Formz\Service\FormService::onRequiredArgumentIsMissing
      */
     public function initializeSubmitFormAction()
     {
-        FormUtility::onRequiredArgumentIsMissing(
+        FormService::onRequiredArgumentIsMissing(
             $this->arguments,
             $this->request,
             function () {
