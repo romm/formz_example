@@ -2,7 +2,7 @@
 /** @noinspection PhpUndefinedVariableInspection */
 $EM_CONF[$_EXTKEY] = [
     'title'       => 'Formz - Examples',
-    'version'     => '0.2.0',
+    'version'     => '0.3.0',
     'state'       => 'beta',
     'description' => 'Provides plug-in examples for the extension Formz.',
 
@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = [
 
     'constraints' => [
         'depends' => [
-            'typo3' => '6.2.0-7.6.99',
+            'typo3' => '6.2.0-8.6.99',
             'formz' => '0.0.0-0.99.99'
         ]
     ]
