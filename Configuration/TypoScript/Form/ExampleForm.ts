@@ -53,7 +53,7 @@ config.tx_formz {
                         required < config.tx_formz.validators.required
                     }
 
-                    activation.condition = doesLikeIceCream
+                    activation.expression = doesLikeIceCream
                 }
 
                 question {
