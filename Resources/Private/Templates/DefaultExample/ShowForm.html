@@ -31,10 +31,10 @@
         <formz:option name="label" value="Email" />
         <formz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <formz:slot name="Field">
             <f:form.textfield class="{inputClass}" property="{fieldName}"
                               id="{fieldId}" placeholder="Email" />
-        </formz:section>
+        </formz:slot>
     </formz:field>
 </f:section>
 
@@ -43,10 +43,10 @@
         <formz:option name="label" value="First name" />
         <formz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <formz:slot name="Field">
             <f:form.textfield class="{inputClass}" property="{fieldName}"
                               id="{fieldId}" placeholder="John" />
-        </formz:section>
+        </formz:slot>
     </formz:field>
 </f:section>
 
@@ -55,10 +55,10 @@
         <formz:option name="label" value="Name" />
         <formz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <formz:slot name="Field">
             <f:form.textfield class="{inputClass}" property="{fieldName}"
                               id="{fieldId}" placeholder="Doe" />
-        </formz:section>
+        </formz:slot>
     </formz:field>
 </f:section>
 
@@ -67,7 +67,7 @@
         <formz:option name="label" value="Gender" />
         <formz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <formz:slot name="Field">
             <div class="radio">
                 <label>
                     <f:form.radio property="{fieldName}" id="{fieldId}-female" value="female" />&nbsp;Female
@@ -79,7 +79,7 @@
                     <f:form.radio property="{fieldName}" id="{fieldId}-male" value="male" />&nbsp;Male
                 </label>
             </div>
-        </formz:section>
+        </formz:slot>
     </formz:field>
 </f:section>
 
@@ -88,10 +88,10 @@
         <formz:option name="label" value="What is the best CMS in the world?" />
         <formz:option name="showSuccess" value="1" />
 
-        <formz:section name="Field">
+        <formz:slot name="Field">
             <f:form.textfield id="{fieldId}" class="{inputClass}" property="{fieldName}"
                               placeholder="I'm sure you know..." />
-        </formz:section>
+        </formz:slot>
     </formz:field>
 </f:section>
 
@@ -100,7 +100,7 @@
         <formz:option name="label" value="Do you like ice cream?" />
         <formz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <formz:slot name="Field">
             <div class="radio">
                 <label>
                     <f:form.radio property="{fieldName}" id="{fieldId}-yes" value="1" />
@@ -114,7 +114,7 @@
                     No
                 </label>
             </div>
-        </formz:section>
+        </formz:slot>
     </formz:field>
 </f:section>
 
@@ -123,7 +123,7 @@
         <formz:option name="label" value="Which flavors?" />
         <formz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <formz:slot name="Field">
             <div class="checkbox">
                 <label>
                     <f:form.checkbox property="{fieldName}" id="{fieldId}-chocolate" multiple="1" value="chocolate" />
@@ -135,7 +135,7 @@
                     <f:form.checkbox property="{fieldName}" id="{fieldId}-strawberry" multiple="1" value="strawberry" />
                     Strawberry </label>
             </div>
-        </formz:section>
+        </formz:slot>
     </formz:field>
 </f:section>
 
