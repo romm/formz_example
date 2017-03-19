@@ -1,7 +1,7 @@
 config.tx_formz {
     forms {
         Romm\FormzExample\Form\ExampleForm {
-            activationCondition {
+            conditionList {
                 doesLikeIceCream {
                     type = fieldHasValue
                     fieldName = likeIceCream
