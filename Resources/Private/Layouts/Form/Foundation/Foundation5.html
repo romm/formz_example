@@ -1,4 +1,4 @@
-{namespace formz=Romm\Formz\ViewHelpers}
+{namespace fz=Romm\Formz\ViewHelpers}
 
 <f:alias map="{
 	classes: 'large expand button',
@@ -20,7 +20,7 @@
         <hr />
     </div>
 
-    <formz:form action="submitForm" name="exForm" object="{form}">
+    <fz:form action="submitForm" name="exForm" object="{form}">
         <div class="row">
             <f:render section="FieldFirstName" />
         </div>
@@ -54,6 +54,6 @@
         <div class="row">
             <f:form.submit value="Send" class="button" />
         </div>
-    </formz:form>
+    </fz:form>
 
 </f:alias>

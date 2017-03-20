@@ -1,8 +1,8 @@
-{namespace formz=Romm\Formz\ViewHelpers}
+{namespace fz=Romm\Formz\ViewHelpers}
 
 <f:render section="Header" />
 
-<formz:form action="submitForm" name="exForm" object="{form}">
+<fz:form action="submitForm" name="exForm" object="{form}">
     <f:render section="FieldFirstName" />
 
     <f:render section="FieldName" />
@@ -18,4 +18,4 @@
     <f:render section="FieldQuestion" />
 
     <f:form.submit value="Send" />
-</formz:form>
+</fz:form>
