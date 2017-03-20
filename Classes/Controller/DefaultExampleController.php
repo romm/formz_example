@@ -13,18 +13,16 @@
 
 namespace Romm\FormzExample\Controller;
 
-use Romm\Formz\Form\FormTrait;
 use Romm\Formz\Service\FormService;
 use Romm\FormzExample\Exceptions\EntryNotFoundException;
 use Romm\FormzExample\Form\ExampleForm;
 use Romm\FormzExample\Layouts\LayoutsInterface;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 
 class DefaultExampleController extends ActionController
 {
-
-    use FormTrait;
-
     const DEFAULT_LAYOUT = LayoutsInterface::LAYOUT_DEFAULT;
 
     /**
@@ -35,6 +33,14 @@ class DefaultExampleController extends ActionController
         LayoutsInterface::LAYOUT_BOOTSTRAP3  => 'Form/Bootstrap/Bootstrap3',
         LayoutsInterface::LAYOUT_FOUNDATION5 => 'Form/Foundation/Foundation5'
     ];
+
+    /**
+     * @param ViewInterface $view
+     */
+    public function initializeView(ViewInterface $view)
+    {
+        $view->assign('formzVersion', ExtensionManagementUtility::getExtensionVersion('formz'));
+    }
 
     /**
      * Show an example form.
