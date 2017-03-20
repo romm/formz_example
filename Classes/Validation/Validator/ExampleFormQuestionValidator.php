@@ -25,8 +25,11 @@ class ExampleFormQuestionValidator extends AbstractValidator
         'default' => [
             'value' => 'Nope!'
         ],
-        'drupal' => [
+        'kidding' => [
             'value' => 'ARE YOU KIDDING ME?!'
+        ],
+        'ok' => [
+            'value' => 'Of course. ;)'
         ]
     ];
 
@@ -35,9 +38,11 @@ class ExampleFormQuestionValidator extends AbstractValidator
      */
     public function isValid($value)
     {
-        if ('typo3' !== strtolower($value)) {
-            if ('drupal' === strtolower($value)) {
-                $this->addError('drupal', 1473679128);
+        if ('typo3' === strtolower($value)) {
+            $this->addNotice('ok', 1490028060);
+        } else {
+            if (in_array(strtolower($value), ['drupal', 'wordpress'])) {
+                $this->addError('kidding', 1473679128);
             } else {
                 $this->addError('default', 1473679117);
             }
