@@ -47,20 +47,6 @@ class DefaultExampleController extends ActionController
     }
 
     /**
-     * @see \Romm\Formz\Service\FormService::onRequiredArgumentIsMissing
-     */
-    public function initializeSubmitFormAction()
-    {
-        FormService::onRequiredArgumentIsMissing(
-            $this->arguments,
-            $this->request,
-            function () {
-                $this->redirect('showForm');
-            }
-        );
-    }
-
-    /**
      * Action called when the Example form is submitted.
      *
      * @param ExampleForm $exForm
