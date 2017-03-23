@@ -13,7 +13,6 @@
 
 namespace Romm\FormzExample\Controller;
 
-use Romm\Formz\Service\FormService;
 use Romm\FormzExample\Exceptions\EntryNotFoundException;
 use Romm\FormzExample\Form\ExampleForm;
 use Romm\FormzExample\Layouts\LayoutsInterface;
@@ -47,11 +46,7 @@ class DefaultExampleController extends ActionController
      */
     public function showFormAction()
     {
-        /** @var ExampleForm $submittedForm */
-        $submittedForm = FormService::getFormWithErrors(ExampleForm::class);
-
         try {
-            $this->view->assign('form', $submittedForm);
             $this->view->assign('layoutPath', $this->getLayoutPath());
             $this->view->assign('layoutUsed', $this->getSelectedLayout());
         } catch (EntryNotFoundException $e) {
