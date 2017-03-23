@@ -2,8 +2,8 @@
 /** @noinspection PhpUndefinedVariableInspection */
 $EM_CONF[$_EXTKEY] = [
     'title'       => 'FormZ • Modern form handler (examples)',
-    'version'     => '0.3.0',
-    'state'       => 'beta',
+    'version'     => '1.0.0',
+    'state'       => 'stable',
     'description' => 'Provides plug-in examples for the extension FormZ. Visit typo3-formz.com for more information.',
 
     'author'       => 'Romain Canon',
