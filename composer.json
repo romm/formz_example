@@ -15,7 +15,7 @@
   ],
   "require": {
     "php": ">=5.5",
-    "romm/formz": "~0.1"
+    "romm/formz": "^1.0"
   },
   "replace": {
     "formz_example": "self.version",
