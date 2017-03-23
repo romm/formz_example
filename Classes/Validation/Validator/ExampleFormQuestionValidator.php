@@ -1,8 +1,8 @@
 <?php
 /*
- * 2016 Romain CANON <romain.hydrocanon@gmail.com>
+ * 2017 Romain CANON <romain.hydrocanon@gmail.com>
  *
- * This file is part of the TYPO3 Formz project.
+ * This file is part of the TYPO3 FormZ project.
  * It is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License, either
  * version 3 of the License, or any later version.
@@ -25,8 +25,11 @@ class ExampleFormQuestionValidator extends AbstractValidator
         'default' => [
             'value' => 'Nope!'
         ],
-        'drupal' => [
+        'kidding' => [
             'value' => 'ARE YOU KIDDING ME?!'
+        ],
+        'ok' => [
+            'value' => 'Of course. ;)'
         ]
     ];
 
@@ -35,9 +38,11 @@ class ExampleFormQuestionValidator extends AbstractValidator
      */
     public function isValid($value)
     {
-        if ('typo3' !== strtolower($value)) {
-            if ('drupal' === strtolower($value)) {
-                $this->addError('drupal', 1473679128);
+        if ('typo3' === strtolower($value)) {
+            $this->addNotice('ok', 1490028060);
+        } else {
+            if (in_array(strtolower($value), ['drupal', 'wordpress'])) {
+                $this->addError('kidding', 1473679128);
             } else {
                 $this->addError('default', 1473679117);
             }

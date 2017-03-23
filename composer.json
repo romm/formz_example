@@ -1,7 +1,7 @@
 {
   "name": "romm/formz-example",
   "type": "typo3-cms-extension",
-  "description": "Provides plug-in examples for the TYPO3 extension Formz.",
+  "description": "Provides plug-in examples for the TYPO3 extension FormZ. Visit typo3-formz.com for more information.",
   "homepage": "http://typo3-formz.com/",
   "keywords": [
     "typo3", "forms", "flexibility"
@@ -15,7 +15,7 @@
   ],
   "require": {
     "php": ">=5.5",
-    "romm/formz": "~0.1"
+    "romm/formz": "^1.0"
   },
   "replace": {
     "formz_example": "self.version",

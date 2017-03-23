@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      xmlns:formz="http://typo3.org/ns/Romm/Formz/ViewHelpers">
+      xmlns:fz="http://typo3.org/ns/Romm/Formz/ViewHelpers">
 
 <f:layout name="{layoutPath}" />
 
@@ -8,66 +8,83 @@
 
 <f:section name="Header">
     <p>
-        This is a small example of a form built with the extension <f:link.external uri="http://typo3-formz.com" title="Formz website">Formz</f:link.external>.
+        This is a small form example, built with the extension <f:link.external uri="http://typo3-formz.com" title="FormZ website">FormZ</f:link.external> (version used: <strong>{formzVersion}</strong>).
     </p>
-
-    <p>
-        →&nbsp;<f:link.external uri="http://typo3-formz.com" title="Formz website">Formz official website</f:link.external>
-    </p>
-
-    <hr />
 
     <p>
         It contains some basic fields with their own validation rules; most of them are handled instantly with <strong>JavaScript</strong>, but the same rules also apply on the server-side with <strong>PHP</strong>.
     </p>
 
+    <hr />
+
     <p>
-        You can take look at the code used by this small extension to understand how it works and how easy it is to set up a new form. You can also read <f:link.external uri="https://docs.typo3.org/typo3cms/extensions/formz/" target="_blank">Formz documentation</f:link.external> to know everything about it (there is also a <f:link.external uri="https://docs.typo3.org/typo3cms/extensions/formz/_pdf/" target="_blank">PDF version</f:link.external>).
+        You can take a look at the code used by this extension to understand how it works and how easy it is to set up a new form:
     </p>
+
+    <ul>
+        <li>
+            See the code on <f:link.external uri="https://github.com/romm/formz_example">GitHub&nbsp;<f:image src="EXT:formz_example/Resources/Public/Images/github-icon.png" width="16" alt="GitHub logo"/></f:link.external>
+        </li>
+        <li>
+            See the extension on <f:link.external uri="https://typo3.org/extensions/repository/view/formz_example">the TER&nbsp;<f:image src="EXT:formz_example/Resources/Public/Images/typo3-icon.png" width="16" alt="TYPO3 logo"/></f:link.external>
+        </li>
+    </ul>
+
+    <hr />
+
+    <p>
+        For more information, you can also read the documentation:
+    </p>
+
+    <ul>
+        <li>Read the documentation on <f:link.external uri="https://docs.typo3.org/typo3cms/extensions/formz/">docs.typo3.org</f:link.external></li>
+        <li>Read the <f:link.external uri="https://docs.typo3.org/typo3cms/extensions/formz/_pdf/" target="_blank">PDF version</f:link.external></li>
+        <li>FormZ official website: <f:link.external uri="http://typo3-formz.com" title="FormZ website">typo3-formz.com&nbsp;<f:image src="EXT:formz_example/Resources/Public/Images/formz-icon@small.png" alt="FormZ logo" /></f:link.external></li>
+    </ul>
 </f:section>
 
 <f:section name="FieldEmail">
-    <formz:field name="email" layout="{layoutUsed}">
-        <formz:option name="label" value="Email" />
-        <formz:option name="labelWrap" value="1" />
+    <fz:field name="email" layout="{layoutUsed}">
+        <fz:option name="label" value="Email" />
+        <fz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <fz:slot name="Field">
             <f:form.textfield class="{inputClass}" property="{fieldName}"
                               id="{fieldId}" placeholder="Email" />
-        </formz:section>
-    </formz:field>
+        </fz:slot>
+    </fz:field>
 </f:section>
 
 <f:section name="FieldFirstName">
-    <formz:field name="firstName" layout="{layoutUsed}">
-        <formz:option name="label" value="First name" />
-        <formz:option name="labelWrap" value="1" />
+    <fz:field name="firstName" layout="{layoutUsed}">
+        <fz:option name="label" value="First name" />
+        <fz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <fz:slot name="Field">
             <f:form.textfield class="{inputClass}" property="{fieldName}"
                               id="{fieldId}" placeholder="John" />
-        </formz:section>
-    </formz:field>
+        </fz:slot>
+    </fz:field>
 </f:section>
 
 <f:section name="FieldName">
-    <formz:field name="name" layout="{layoutUsed}">
-        <formz:option name="label" value="Name" />
-        <formz:option name="labelWrap" value="1" />
+    <fz:field name="name" layout="{layoutUsed}">
+        <fz:option name="label" value="Name" />
+        <fz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <fz:slot name="Field">
             <f:form.textfield class="{inputClass}" property="{fieldName}"
                               id="{fieldId}" placeholder="Doe" />
-        </formz:section>
-    </formz:field>
+        </fz:slot>
+    </fz:field>
 </f:section>
 
 <f:section name="FieldGender">
-    <formz:field name="gender" layout="{layoutUsed}">
-        <formz:option name="label" value="Gender" />
-        <formz:option name="labelWrap" value="1" />
+    <fz:field name="gender" layout="{layoutUsed}">
+        <fz:option name="label" value="Gender" />
+        <fz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <fz:slot name="Field">
             <div class="radio">
                 <label>
                     <f:form.radio property="{fieldName}" id="{fieldId}-female" value="female" />&nbsp;Female
@@ -79,28 +96,28 @@
                     <f:form.radio property="{fieldName}" id="{fieldId}-male" value="male" />&nbsp;Male
                 </label>
             </div>
-        </formz:section>
-    </formz:field>
+        </fz:slot>
+    </fz:field>
 </f:section>
 
 <f:section name="FieldQuestion">
-    <formz:field name="question" layout="{layoutUsed}">
-        <formz:option name="label" value="What is the best CMS in the world?" />
-        <formz:option name="showSuccess" value="1" />
+    <fz:field name="question" layout="{layoutUsed}">
+        <fz:option name="label" value="What is the best CMS in the world?" />
+        <fz:option name="showSuccess" value="1" />
 
-        <formz:section name="Field">
+        <fz:slot name="Field">
             <f:form.textfield id="{fieldId}" class="{inputClass}" property="{fieldName}"
                               placeholder="I'm sure you know..." />
-        </formz:section>
-    </formz:field>
+        </fz:slot>
+    </fz:field>
 </f:section>
 
 <f:section name="FieldLikeIceCream">
-    <formz:field name="likeIceCream" layout="{layoutUsed}">
-        <formz:option name="label" value="Do you like ice cream?" />
-        <formz:option name="labelWrap" value="1" />
+    <fz:field name="likeIceCream" layout="{layoutUsed}">
+        <fz:option name="label" value="Do you like ice cream?" />
+        <fz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <fz:slot name="Field">
             <div class="radio">
                 <label>
                     <f:form.radio property="{fieldName}" id="{fieldId}-yes" value="1" />
@@ -114,16 +131,16 @@
                     No
                 </label>
             </div>
-        </formz:section>
-    </formz:field>
+        </fz:slot>
+    </fz:field>
 </f:section>
 
 <f:section name="FieldIceCreamFlavors">
-    <formz:field name="iceCreamFlavors" layout="{layoutUsed}">
-        <formz:option name="label" value="Which flavors?" />
-        <formz:option name="labelWrap" value="1" />
+    <fz:field name="iceCreamFlavors" layout="{layoutUsed}">
+        <fz:option name="label" value="Which flavors?" />
+        <fz:option name="labelWrap" value="1" />
 
-        <formz:section name="Field">
+        <fz:slot name="Field">
             <div class="checkbox">
                 <label>
                     <f:form.checkbox property="{fieldName}" id="{fieldId}-chocolate" multiple="1" value="chocolate" />
@@ -135,8 +152,8 @@
                     <f:form.checkbox property="{fieldName}" id="{fieldId}-strawberry" multiple="1" value="strawberry" />
                     Strawberry </label>
             </div>
-        </formz:section>
-    </formz:field>
+        </fz:slot>
+    </fz:field>
 </f:section>
 
 </html>

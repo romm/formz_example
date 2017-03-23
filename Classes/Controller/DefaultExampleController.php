@@ -1,23 +1,27 @@
 <?php
 /*
- * 2016
- * Romain CANON <romain.canon.ext@direct-energie.com>
+ * 2017 Romain CANON <romain.hydrocanon@gmail.com>
+ *
+ * This file is part of the TYPO3 FormZ project.
+ * It is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License, either
+ * version 3 of the License, or any later version.
+ *
+ * For the full copyright and license information, see:
+ * http://www.gnu.org/licenses/gpl-3.0.html
  */
 
 namespace Romm\FormzExample\Controller;
 
-use Romm\Formz\Form\FormTrait;
-use Romm\Formz\Service\FormService;
 use Romm\FormzExample\Exceptions\EntryNotFoundException;
 use Romm\FormzExample\Form\ExampleForm;
 use Romm\FormzExample\Layouts\LayoutsInterface;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 
 class DefaultExampleController extends ActionController
 {
-
-    use FormTrait;
-
     const DEFAULT_LAYOUT = LayoutsInterface::LAYOUT_DEFAULT;
 
     /**
@@ -30,34 +34,24 @@ class DefaultExampleController extends ActionController
     ];
 
     /**
+     * @param ViewInterface $view
+     */
+    public function initializeView(ViewInterface $view)
+    {
+        $view->assign('formzVersion', ExtensionManagementUtility::getExtensionVersion('formz'));
+    }
+
+    /**
      * Show an example form.
      */
     public function showFormAction()
     {
-        /** @var ExampleForm $submittedForm */
-        $submittedForm = FormService::getFormWithErrors(ExampleForm::class);
-
         try {
-            $this->view->assign('form', $submittedForm);
             $this->view->assign('layoutPath', $this->getLayoutPath());
             $this->view->assign('layoutUsed', $this->getSelectedLayout());
         } catch (EntryNotFoundException $e) {
             $this->redirect('showForm', null, null, ['layout' => self::DEFAULT_LAYOUT]);
         }
-    }
-
-    /**
-     * @see \Romm\Formz\Service\FormService::onRequiredArgumentIsMissing
-     */
-    public function initializeSubmitFormAction()
-    {
-        FormService::onRequiredArgumentIsMissing(
-            $this->arguments,
-            $this->request,
-            function () {
-                $this->redirect('showForm');
-            }
-        );
     }
 
     /**

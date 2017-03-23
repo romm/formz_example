@@ -1,7 +1,7 @@
 config.tx_formz {
     forms {
         Romm\FormzExample\Form\ExampleForm {
-            activationCondition {
+            conditionList {
                 doesLikeIceCream {
                     type = fieldHasValue
                     fieldName = likeIceCream
@@ -53,7 +53,7 @@ config.tx_formz {
                         required < config.tx_formz.validators.required
                     }
 
-                    activation.condition = doesLikeIceCream
+                    activation.expression = doesLikeIceCream
                 }
 
                 question {
