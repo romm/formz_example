@@ -36,8 +36,8 @@ class MultiLayoutExampleController extends AbstractExampleController
     public function showFormAction()
     {
         try {
-            $this->view->assign('layoutPath', $this->getLayoutPath());
-            $this->view->assign('layoutUsed', $this->getSelectedLayout());
+            $this->view->assign('globalLayout', $this->getGlobalLayout());
+            $this->view->assign('fieldLayout', $this->getSelectedLayout());
         } catch (EntryNotFoundException $e) {
             $this->redirect('showForm', null, null, ['layout' => self::DEFAULT_LAYOUT]);
         }
@@ -53,7 +53,7 @@ class MultiLayoutExampleController extends AbstractExampleController
     public function submitFormAction(MultiLayoutForm $form)
     {
         $this->view->assign('form', $form);
-        $this->view->assign('layout', $this->getLayoutPath());
+        $this->view->assign('layout', $this->getGlobalLayout());
     }
 
     /**
@@ -72,7 +72,7 @@ class MultiLayoutExampleController extends AbstractExampleController
      * @return string
      * @throws EntryNotFoundException
      */
-    protected function getLayoutPath()
+    protected function getGlobalLayout()
     {
         $selectedLayout = $this->getSelectedLayout();
 

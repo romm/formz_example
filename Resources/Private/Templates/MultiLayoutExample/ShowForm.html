@@ -2,14 +2,14 @@
       xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:fz="http://typo3.org/ns/Romm/Formz/ViewHelpers">
 
-<f:layout name="{layoutPath}" />
+<f:layout name="{globalLayout}" />
 
 <f:section name="Header">
     <f:render partial="Form/About" section="About" arguments="{formzVersion: formzVersion}" />
 </f:section>
 
 <f:section name="FieldEmail">
-    <fz:field name="email" layout="{layoutUsed}">
+    <fz:field name="email" layout="{fieldLayout}">
         <fz:option name="label" value="Email" />
         <fz:option name="labelWrap" value="1" />
 
@@ -21,7 +21,7 @@
 </f:section>
 
 <f:section name="FieldFirstName">
-    <fz:field name="firstName" layout="{layoutUsed}">
+    <fz:field name="firstName" layout="{fieldLayout}">
         <fz:option name="label" value="First name" />
         <fz:option name="labelWrap" value="1" />
 
@@ -33,7 +33,7 @@
 </f:section>
 
 <f:section name="FieldName">
-    <fz:field name="name" layout="{layoutUsed}">
+    <fz:field name="name" layout="{fieldLayout}">
         <fz:option name="label" value="Name" />
         <fz:option name="labelWrap" value="1" />
 
@@ -45,7 +45,7 @@
 </f:section>
 
 <f:section name="FieldGender">
-    <fz:field name="gender" layout="{layoutUsed}">
+    <fz:field name="gender" layout="{fieldLayout}">
         <fz:option name="label" value="Gender" />
         <fz:option name="labelWrap" value="1" />
 
@@ -66,7 +66,7 @@
 </f:section>
 
 <f:section name="FieldQuestion">
-    <fz:field name="question" layout="{layoutUsed}">
+    <fz:field name="question" layout="{fieldLayout}">
         <fz:option name="label" value="What is the best CMS in the world?" />
         <fz:option name="showSuccess" value="1" />
 
@@ -78,7 +78,7 @@
 </f:section>
 
 <f:section name="FieldLikeIceCream">
-    <fz:field name="likeIceCream" layout="{layoutUsed}">
+    <fz:field name="likeIceCream" layout="{fieldLayout}">
         <fz:option name="label" value="Do you like ice cream?" />
         <fz:option name="labelWrap" value="1" />
 
@@ -101,7 +101,7 @@
 </f:section>
 
 <f:section name="FieldIceCreamFlavors">
-    <fz:field name="iceCreamFlavors" layout="{layoutUsed}">
+    <fz:field name="iceCreamFlavors" layout="{fieldLayout}">
         <fz:option name="label" value="Which flavors?" />
         <fz:option name="labelWrap" value="1" />
 
