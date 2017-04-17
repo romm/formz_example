@@ -36,5 +36,5 @@ call_user_func(
         $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$defaultPluginKey] = 'recursive,select_key,pages';
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($defaultPluginKey, "FILE:EXT:$extensionKey/Configuration/FlexForms/FlexForm.xml");
     },
-    $_EXTKEY
+    'formz_example'
 );
