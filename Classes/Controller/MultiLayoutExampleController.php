@@ -14,7 +14,7 @@
 namespace Romm\FormzExample\Controller;
 
 use Romm\FormzExample\Exceptions\EntryNotFoundException;
-use Romm\FormzExample\Form\ExampleForm;
+use Romm\FormzExample\Form\MultiLayoutForm;
 use Romm\FormzExample\Layouts\LayoutsInterface;
 
 class MultiLayoutExampleController extends AbstractExampleController
@@ -47,12 +47,12 @@ class MultiLayoutExampleController extends AbstractExampleController
      * Action called when the form has been submitted and passed its validation
      * without a single error.
      *
-     * @param ExampleForm $exForm
-     * @validate $exForm Romm.Formz:Form\DefaultForm(name=exForm)
+     * @param MultiLayoutForm $form
+     * @validate $form Romm.Formz:Form\DefaultForm(name=form)
      */
-    public function submitFormAction(ExampleForm $exForm)
+    public function submitFormAction(MultiLayoutForm $form)
     {
-        $this->view->assign('form', $exForm);
+        $this->view->assign('form', $form);
         $this->view->assign('layout', $this->getLayoutPath());
     }
 

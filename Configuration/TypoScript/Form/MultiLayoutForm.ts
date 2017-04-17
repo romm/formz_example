@@ -1,6 +1,6 @@
 config.tx_formz {
     forms {
-        Romm\FormzExample\Form\ExampleForm {
+        Romm\FormzExample\Form\MultiLayoutForm {
             conditionList {
                 doesLikeIceCream {
                     type = fieldHasValue

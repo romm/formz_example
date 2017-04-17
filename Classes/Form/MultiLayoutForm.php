@@ -16,9 +16,8 @@ namespace Romm\FormzExample\Form;
 use Romm\Formz\Form\FormInterface;
 use Romm\Formz\Form\FormTrait;
 
-class ExampleForm implements FormInterface
+class MultiLayoutForm implements FormInterface
 {
-
     use FormTrait;
 
     /**

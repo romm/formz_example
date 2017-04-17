@@ -1,1 +1,1 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:formz_example/Configuration/TypoScript/Form/ExampleForm.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:formz_example/Configuration/TypoScript/Form/MultiLayoutForm.ts">
