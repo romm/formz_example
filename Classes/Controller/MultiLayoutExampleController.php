@@ -20,7 +20,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 
-class DefaultExampleController extends ActionController
+class MultiLayoutExampleController extends ActionController
 {
     const DEFAULT_LAYOUT = LayoutsInterface::LAYOUT_DEFAULT;
 
@@ -28,9 +28,9 @@ class DefaultExampleController extends ActionController
      * @var array
      */
     protected static $layoutList = [
-        LayoutsInterface::LAYOUT_DEFAULT     => 'Form/Default',
-        LayoutsInterface::LAYOUT_BOOTSTRAP3  => 'Form/Bootstrap/Bootstrap3',
-        LayoutsInterface::LAYOUT_FOUNDATION5 => 'Form/Foundation/Foundation5'
+        LayoutsInterface::LAYOUT_DEFAULT     => 'Form/MultiLayoutExample/Default',
+        LayoutsInterface::LAYOUT_BOOTSTRAP3  => 'Form/MultiLayoutExample/Bootstrap3',
+        LayoutsInterface::LAYOUT_FOUNDATION5 => 'Form/MultiLayoutExample/Foundation5'
     ];
 
     /**

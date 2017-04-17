@@ -11,10 +11,10 @@ call_user_func(
             'Romm.' . $extensionKey,
             'Example',
             array(
-                'DefaultExample' => 'showForm, submitForm'
+                'MultiLayoutExample' => 'showForm, submitForm'
             ),
             array(
-                'DefaultExample' => 'showForm, submitForm'
+                'MultiLayoutExample' => 'showForm, submitForm'
             )
         );
     },

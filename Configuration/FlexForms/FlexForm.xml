@@ -16,8 +16,8 @@
 								<type>select</type>
 								<items>
 									<numIndex index="1">
-										<numIndex index="0">Default example</numIndex>
-										<numIndex index="1">DefaultExample->showForm;DefaultExample->submitForm</numIndex>
+										<numIndex index="0">Multi layout example</numIndex>
+										<numIndex index="1">MultiLayoutExample->showForm;MultiLayoutExample->submitForm</numIndex>
 									</numIndex>
 								</items>
 							</config>
@@ -27,6 +27,7 @@
 					<settings.layoutUsed>
 						<TCEforms>
 							<label>Layout</label>
+							<displayCond>FIELD:switchableControllerActions:=:MultiLayoutExample->showForm;MultiLayoutExample->submitForm</displayCond>
 							<config>
 								<type>select</type>
 								<items>

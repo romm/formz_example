@@ -6,29 +6,29 @@ if (!defined('TYPO3_MODE')) {
 /** @noinspection PhpUndefinedVariableInspection */
 call_user_func(
     function ($extensionKey) {
-        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            $extensionKey,
-            'Example',
-            '[FormZ] Form example'
-        );
-
         // Including TypoScript.
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $extensionKey,
             'Configuration/TypoScript',
-            '[FormZ] Form example - Configuration'
+            '[FormZ] Forms example - Configuration'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $extensionKey,
             'Configuration/TypoScript/View/Bootstrap/Bootstrap3',
-            '[FormZ] Form example - Assets for Twitter Bootstrap 3'
+            '[FormZ] Forms example - Assets for Twitter Bootstrap 3'
         );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
             $extensionKey,
             'Configuration/TypoScript/View/Foundation/Foundation5',
-            '[FormZ] Form example - Assets for Foundation 5 Assets'
+            '[FormZ] Forms example - Assets for Foundation 5 Assets'
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            $extensionKey,
+            'Example',
+            '[FormZ] Forms example'
         );
 
         $defaultPluginKey = 'formzexample_example';
