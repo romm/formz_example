@@ -16,11 +16,8 @@ namespace Romm\FormzExample\Controller;
 use Romm\FormzExample\Exceptions\EntryNotFoundException;
 use Romm\FormzExample\Form\ExampleForm;
 use Romm\FormzExample\Layouts\LayoutsInterface;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 
-class MultiLayoutExampleController extends ActionController
+class MultiLayoutExampleController extends AbstractExampleController
 {
     const DEFAULT_LAYOUT = LayoutsInterface::LAYOUT_DEFAULT;
 
@@ -34,15 +31,7 @@ class MultiLayoutExampleController extends ActionController
     ];
 
     /**
-     * @param ViewInterface $view
-     */
-    public function initializeView(ViewInterface $view)
-    {
-        $view->assign('formzVersion', ExtensionManagementUtility::getExtensionVersion('formz'));
-    }
-
-    /**
-     * Show an example form.
+     * Main action that displays the actual form.
      */
     public function showFormAction()
     {
@@ -55,7 +44,8 @@ class MultiLayoutExampleController extends ActionController
     }
 
     /**
-     * Action called when the Example form is submitted.
+     * Action called when the form has been submitted and passed its validation
+     * without a single error.
      *
      * @param ExampleForm $exForm
      * @validate $exForm Romm.Formz:Form\DefaultForm(name=exForm)
@@ -67,6 +57,8 @@ class MultiLayoutExampleController extends ActionController
     }
 
     /**
+     * Returns the name of the selected layout for this plug-in.
+     *
      * @return string
      */
     protected function getSelectedLayout()
