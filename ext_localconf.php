@@ -10,12 +10,14 @@ call_user_func(
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Romm.' . $extensionKey,
             'Example',
-            array(
-                'MultiLayoutExample' => 'showForm, submitForm'
-            ),
-            array(
-                'MultiLayoutExample' => 'showForm, submitForm'
-            )
+            [
+                'MultiLayoutExample'  => 'showForm, submitForm',
+                'RegistrationExample' => 'showForm, submitForm'
+            ],
+            [
+                'MultiLayoutExample'  => 'showForm, submitForm',
+                'RegistrationExample' => 'showForm, submitForm'
+            ]
         );
     },
     $_EXTKEY

@@ -19,6 +19,10 @@
 										<numIndex index="0">Multi layout example</numIndex>
 										<numIndex index="1">MultiLayoutExample->showForm;MultiLayoutExample->submitForm</numIndex>
 									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">Registration example</numIndex>
+										<numIndex index="1">RegistrationExample->showForm;RegistrationExample->submitForm</numIndex>
+									</numIndex>
 								</items>
 							</config>
 						</TCEforms>

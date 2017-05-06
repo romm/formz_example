@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:fz="http://typo3.org/ns/Romm/Formz/ViewHelpers">
+
+<f:layout name="{layoutPath}" />
+
+<f:section name="Header">
+	<f:render partial="Form/About" section="About" arguments="{formzVersion: formzVersion}" />
+</f:section>
+
+<f:section name="FieldEmail">
+	<fz:field name="email" layout="{fieldLayout}">
+		<fz:option name="label" value="Email" />
+
+		<fz:slot name="Field">
+			<f:form.textfield class="{inputClass}" property="{fieldName}"
+			                  id="{fieldId}" placeholder="Email" />
+		</fz:slot>
+	</fz:field>
+</f:section>
+
+<f:section name="FieldPassword">
+	<fz:field name="password" layout="{fieldLayout}">
+		<fz:option name="label" value="Password" />
+
+		<fz:slot name="Field">
+			<f:form.password class="{inputClass}" property="{fieldName}"
+			                  id="{fieldId}" />
+		</fz:slot>
+	</fz:field>
+</f:section>
+
+<f:section name="FieldPasswordRepeat">
+	<fz:field name="passwordRepeat" layout="{fieldLayout}">
+		<fz:option name="label" value="Repeat password" />
+
+		<fz:slot name="Field">
+			<f:form.password class="{inputClass}" property="{fieldName}"
+			                  id="{fieldId}" />
+		</fz:slot>
+	</fz:field>
+</f:section>
+
+</html>
