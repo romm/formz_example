@@ -41,7 +41,7 @@ class ExampleFormQuestionValidator extends AbstractValidator
         if ('typo3' === strtolower($value)) {
             $this->addNotice('ok', 1490028060);
         } else {
-            if (in_array(strtolower($value), ['drupal', 'wordpress'])) {
+            if (in_array(strtolower($value), ['drupal', 'joomla', 'magento', 'wordpress'])) {
                 $this->addError('kidding', 1473679128);
             } else {
                 $this->addError('default', 1473679117);
