@@ -25,13 +25,15 @@ call_user_func(
             '[FormZ] Forms example - Assets for Foundation 5 Assets'
         );
 
+        $pluginName = 'Example';
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'Romm.' . $extensionKey,
-            'Example',
+            $pluginName,
             '[FormZ] Forms example'
         );
 
-        $defaultPluginKey = 'formzexample_example';
+        $extensionCode = strtolower(\TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($extensionKey));
+        $defaultPluginKey = $extensionCode . '_' . strtolower($pluginName);
         $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$defaultPluginKey] = 'pi_flexform';
         $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$defaultPluginKey] = 'recursive,select_key,pages';
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($defaultPluginKey, "FILE:EXT:$extensionKey/Configuration/FlexForms/FlexForm.xml");
