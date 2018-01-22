@@ -27,7 +27,7 @@ call_user_func(
 
         $pluginName = 'Example';
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            $extensionKey,
+            'Romm.' . $extensionKey,
             $pluginName,
             '[FormZ] Forms example'
         );
