@@ -56,6 +56,10 @@ class ExampleForm implements FormInterface
      */
     protected $iceCreamFlavors;
 
+    public function __construct()
+    {
+    }
+
     /**
      * @return string
      */
