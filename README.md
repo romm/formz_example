@@ -1,5 +1,10 @@
 # ![FormZ](Resources/Public/Images/formz-icon@medium.png) FormZ Example
 
+> **Warning** This package is no longer maintained.
+
+<details>
+<summary>ℹ️ Show more info</summary>
+
 > :heavy_exclamation_mark: *This PHP library has been developed for [![TYPO3](Resources/Public/Images/typo3-icon.png)TYPO3 CMS](https://typo3.org) and is intended to TYPO3 extension developers.*
 
 ---
@@ -37,3 +42,4 @@
   * Include the **TypoScript static content `[FormZ] View configuration for XXX`**
 
   * If you need to include CSS and JavaScript assets, include the **TypoScript static content `[FormZ] Form example - Asset for XXX`**
+</details>
